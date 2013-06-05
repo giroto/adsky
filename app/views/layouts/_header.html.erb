@@ -1,0 +1,58 @@
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+             <a class="brand" href="/">AdSky</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li>
+                            <%= link_to "Home", root_path %>
+                        </lib>
+                        <li>
+                        	<%= link_to "Blogs", blogs_path %>
+                        </li>
+                        <li>
+                        	<%= link_to "Sites", sites_path %>
+                        </li>
+                        <li>
+                        	<%= link_to "Apps Mobile", apps_path %>
+                        </li>
+                        <li>
+                        	<%= link_to "YouTube", youtube_path %>
+                        </li>
+                        <li>
+                        	<%= link_to "Facebook", facebook_path %>
+                        </li>
+                        <li>
+                        	<%= link_to "Google+", googleplus_path %>
+                        </li>
+                        <li>
+                        	<%= link_to "Twitter", twitter_path %>
+                        </li>
+                        <li>
+                        	<%= link_to "Instragram", instagram_path %>
+                        </li>
+                        <li>
+                        	<%= link_to "Pinterest", pinterest_path %>
+                        </li>
+                        <li>
+                        	<%= link_to "Outros", outros_path %>
+                        </li>
+                    </ul>
+                    <ul class="nav pull-right">
+                                <% if user_signed_in? %>
+                        <li><%= link_to "Editar", edit_user_registration_path %></li>
+                        <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+                      <% else %>
+                    <li><%= link_to "Entrar", new_user_session_path %></li>
+                      <% end %>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
